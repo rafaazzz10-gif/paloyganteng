@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.E. Portofolio | Elektronik & Promo Heboh</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Tailwind untuk menggunakan Font Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefefe; /* Hampir putih */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-pink': '#EC4899', // Pink cerah untuk aksi utama (setara pink-500/600)
+                        'light-pink': '#FCE7F6', // Pink muda untuk latar belakang (setara pink-100)
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+
+    <!-- Header & Navigasi -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-widest text-primary-pink">
+                R A F A . E L E C T R O
+            </a>
+            
+            <!-- Navigasi (Sembunyi di mobile, tampilkan di desktop) -->
+            <nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#beranda" class="hover:text-primary-pink transition duration-200">Beranda</a>
+                <a href="#promo" class="hover:text-primary-pink transition duration-200">Promo Heboh</a>
+                <a href="#produk" class="hover:text-primary-pink transition duration-200">Produk</a>
+                <a href="#profil" class="hover:text-primary-pink transition duration-200">Profil Saya</a>
+            </nav>
+
+            <!-- Tombol untuk mobile menu (opsional, untuk tampilan yang lebih lengkap) -->
+            <button class="md:hidden p-2 rounded-lg text-primary-pink hover:bg-light-pink transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Bagian Hero / Promo Besar-besaran (Latar Belakang Putih-Pink) -->
+    <section id="beranda" class="bg-light-pink py-16 sm:py-24 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-800 mb-4">
+                <span class="text-primary-pink">PROMO HEBOH</span> AKHIR TAHUN!
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-600 mb-8">
+                Dapatkan Diskon Hingga <span class="font-bold text-red-600">70%</span> untuk Semua Gadget Pilihan.
+            </p>
+            <a href="#produk" class="inline-block px-8 py-3 bg-primary-pink text-white text-lg font-bold rounded-xl shadow-lg hover:bg-pink-700 transition duration-300 transform hover:scale-105">
+                Lihat Semua Produk
+            </a>
+            <p id="promo" class="mt-4 text-sm text-gray-500">Penawaran terbatas hingga stok habis!</p>
+        </div>
+    </section>
+
+    <!-- Bagian Daftar Produk Elektronik -->
+    <section id="produk" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12 border-b-2 border-primary-pink pb-2 inline-block">
+                Produk Pilihan
+            </h2>
+
+            <!-- Grid Produk (Otomatis menyesuaikan 2 kolom di mobile, 3 di desktop) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+                
+                <!-- Kartu Produk 1: HP Terbaru -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/400x300/EC4899/FFFFFF?text=Smartphone+X" alt="Gambar Smartphone Terbaru" class="w-full h-32 sm:h-48 object-cover bg-light-pink">
+                    <div class="p-4 sm:p-5">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate mb-1">Smartphone X Pro (256GB)</h3>
+                        <p class="text-sm text-gray-500 mb-2">Kamera 108MP, Baterai Tahan Lama</p>
+                        <p class="text-xl font-bold text-red-500 line-through">Rp 12.000.000</p>
+                        <p class="text-2xl font-extrabold text-primary-pink mt-1">Rp 6.999.000</p>
+                        <a href="#" class="mt-3 block w-full text-center py-2 bg-primary-pink text-white rounded-lg text-sm font-medium hover:bg-pink-700 transition">Beli Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Kartu Produk 2: Laptop Canggih -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/400x300/EC4899/FFFFFF?text=Laptop+Ultra" alt="Gambar Laptop Canggih" class="w-full h-32 sm:h-48 object-cover bg-light-pink">
+                    <div class="p-4 sm:p-5">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate mb-1">Laptop Ultra 14"</h3>
+                        <p class="text-sm text-gray-500 mb-2">Prosesor i9, RAM 32GB, Desain Tipis</p>
+                        <p class="text-xl font-bold text-red-500 line-through">Rp 25.000.000</p>
+                        <p class="text-2xl font-extrabold text-primary-pink mt-1">Rp 14.999.000</p>
+                        <a href="#" class="mt-3 block w-full text-center py-2 bg-primary-pink text-white rounded-lg text-sm font-medium hover:bg-pink-700 transition">Beli Sekarang</a>
+                    </div>
+                </div>
+                
+                <!-- Kartu Produk 3: Smartwatch -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/400x300/EC4899/FFFFFF?text=Smartwatch+V2" alt="Gambar Smartwatch" class="w-full h-32 sm:h-48 object-cover bg-light-pink">
+                    <div class="p-4 sm:p-5">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate mb-1">Smartwatch V2 Sport</h3>
+                        <p class="text-sm text-gray-500 mb-2">Monitor Jantung, Tahan Air, GPS</p>
+                        <p class="text-xl font-bold text-red-500 line-through">Rp 3.500.000</p>
+                        <p class="text-2xl font-extrabold text-primary-pink mt-1">Rp 1.499.000</p>
+                        <a href="#" class="mt-3 block w-full text-center py-2 bg-primary-pink text-white rounded-lg text-sm font-medium hover:bg-pink-700 transition">Beli Sekarang</a>
+                    </div>
+                </div>
+
+                 <!-- Kartu Produk 4: Headphone Nirkabel -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/400x300/EC4899/FFFFFF?text=Headphone+Noise+Cancelling" alt="Gambar Headphone Nirkabel" class="w-full h-32 sm:h-48 object-cover bg-light-pink">
+                    <div class="p-4 sm:p-5">
+                        <h3 class="text-lg font-semibold text-gray-800 truncate mb-1">Headphone ANC Premium</h3>
+                        <p class="text-sm text-gray-500 mb-2">Audio Hi-Res, Noise Cancelling</p>
+                        <p class="text-xl font-bold text-red-500 line-through">Rp 4.000.000</p>
+                        <p class="text-2xl font-extrabold text-primary-pink mt-1">Rp 1.999.000</p>
+                        <a href="#" class="mt-3 block w-full text-center py-2 bg-primary-pink text-white rounded-lg text-sm font-medium hover:bg-pink-700 transition">Beli Sekarang</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Profil (Portofolio) -->
+    <section id="profil" class="py-16 sm:py-20 bg-light-pink">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
+                Profil Pembuat Website
+            </h2>
+            <div class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-2xl border-t-4 border-primary-pink">
+                <div class="flex flex-col md:flex-row items-start md:items-center">
+                    <div class="w-24 h-24 mb-4 md:mb-0 md:mr-6 flex-shrink-0 bg-primary-pink rounded-full flex items-center justify-center text-white text-5xl font-extrabold border-4 border-white shadow-md">
+                        M R
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Muhamad Rafa Firdaus</h3>
+                        
+                        <div class="space-y-2">
+                            <p class="text-lg text-gray-600">
+                                <span class="font-semibold text-primary-pink">Status:</span> Pelajar
+                            </p>
+                            <p class="text-lg text-gray-600">
+                                <span class="font-semibold text-primary-pink">Riwayat Pendidikan:</span> Sekolah Dewi Sartika
+                            </p>
+                            <p class="text-lg text-gray-600">
+                                <span class="font-semibold text-primary-pink">Jurusan:</span> Teknik Komputer dan Jaringan (TKJ)
+                            </p>
+                        </div>
+                        
+                        <p class="mt-4 text-gray-700 italic border-l-4 border-primary-pink pl-3">
+                            "Website ini dibuat sebagai bagian dari portofolio saya dalam keahlian pengembangan web. Menguasai HTML, CSS (Tailwind), dan JavaScript untuk menciptakan solusi digital yang responsif dan menarik."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 R.E. Portofolio | Dibuat oleh Muhamad Rafa Firdaus (TKJ)</p>
+            <p class="text-sm text-gray-400">Desain Responsif dengan Tailwind CSS | Semua Harga dalam Promo Heboh</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk interaksi ringan (jika diperlukan) -->
+    <script>
+        // Contoh: Logika untuk menu mobile bisa ditambahkan di sini.
+        // Untuk saat ini, draf ini hanya fokus pada tampilan statis dan responsif.
+        console.log("Website Portofolio Elektronik oleh Muhamad Rafa Firdaus siap ditampilkan.");
+    </script>
+</body>
+</html>
+
